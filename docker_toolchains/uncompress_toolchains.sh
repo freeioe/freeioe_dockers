@@ -4,7 +4,6 @@ set -e
 
 cd /toolchains
 
-tree .
 # chmod a+x *.sh
 
 # TGW 3030 (Q102)
