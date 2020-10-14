@@ -3,3 +3,4 @@
 *.swp
 
 docker_toolchains/toolchains
+*.tar
