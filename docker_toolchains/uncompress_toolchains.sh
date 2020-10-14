@@ -3,7 +3,9 @@
 set -e
 
 cd /toolchains
-chmod a+x *.sh
+
+tree .
+# chmod a+x *.sh
 
 # TGW 3030 (Q102)
 echo "TGW 3030 Toolchain"
