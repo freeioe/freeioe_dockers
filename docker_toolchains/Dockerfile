@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-RUN mkdir -p /toolchain
-RUN mkdir -p /bin
+RUN mkdir -p /toolchains
 
 #COPY toolchains /toolchains
 COPY download_toolchains.sh /download_toolchains.sh

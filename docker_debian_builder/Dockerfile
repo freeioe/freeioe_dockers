@@ -1,5 +1,14 @@
 FROM debian:buster
 
+RUN mkdir -p /toolchains
+
+#COPY toolchains /toolchains
+COPY download_toolchains.sh /download_toolchains.sh
+COPY uncompress_toolchains.sh /uncompress_toolchains.sh
+
+RUN chmod +x /download_toolchains.sh
+RUN chmod +x /uncompress_toolchains.sh
+
 RUN apt-get update
 RUN apt-get install -y build-essential git autoconf \
     libreadline-dev \
