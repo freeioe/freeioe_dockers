@@ -4,7 +4,7 @@ MF_DOCKER_IMAGE_NAME_PREFIX ?= kooiot
 PROJECT_NAME ?= freeioe
 
 all:
-	docker buildx build --platform linux/amd64 --tag kooiot/skynet --file ./Dockerfile .
+	docker buildx build --platform linux/amd64 --tag ${MF_DOCKER_IMAGE_NAME_PREFIX}/freeioe --file ./Dockerfile .
 
 .PHONY: all
 

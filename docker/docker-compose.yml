@@ -2,7 +2,7 @@ version: "3"
 
 services:
   skynet_freeioe:
-    image: kooiot/skynet:latest
+    image: kooiot/freeioe:latest
     restart: on-failure
     ports:
       - "8808:8808"
