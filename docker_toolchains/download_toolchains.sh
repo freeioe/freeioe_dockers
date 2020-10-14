@@ -2,7 +2,7 @@
 
 set -e
 
-TL_DIR="/toolchains"
+TL_DIR="/"
 
 DL_VER="toolchain_v1"
 DL_URL="https://github.com/freeioe/freeioe_dockers/releases/download/"${DL_VER}
