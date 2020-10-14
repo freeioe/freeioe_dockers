@@ -1,8 +1,8 @@
 FROM debian:buster
 
-RUN mkdir -p /toolchains
+# RUN mkdir -p /toolchains
+# COPY toolchains /toolchains
 
-#COPY toolchains /toolchains
 COPY download_toolchains.sh /download_toolchains.sh
 COPY uncompress_toolchains.sh /uncompress_toolchains.sh
 
