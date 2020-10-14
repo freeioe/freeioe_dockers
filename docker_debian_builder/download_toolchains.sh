@@ -11,7 +11,7 @@ DL_FILE="toolchains.tar"
 mkdir -p ${TL_DIR}
 cd ${TL_DIR}
 
-wget ${DL_URL}/${DL_FILE} -O ${DL_FILE}
+wget -nv -O ${DL_FILE} ${DL_URL}/${DL_FILE}
 
 tar xvf ${DL_FILE}
 rm ${DL_FILE}
