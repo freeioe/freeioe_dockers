@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: FreeIOE Docker Images (amd64, 386) CI
 
 on:
   push:
