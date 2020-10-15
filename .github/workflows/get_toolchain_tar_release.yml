@@ -21,7 +21,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Get the toolchain tar file
-        run: wget -nv -O toolchains.tar http://openwrt.kooiot.com/download/toolchains/v1.tar
+        run: wget -nv -O toolchains.tar http://openwrt.kooiot.com/download/toolchains/latest.tar
+
+      - name: Get the toolchain tar file
+        run: |
+          md5sum toolchains.tar > toolchains_version.txt
+          date >> toolchains_version.txt
 
       - name: Update Release
         # You may pin to the exact commit or the version.
@@ -31,15 +36,17 @@ jobs:
           # Your Github token; try \$\{\{ secrets.GITHUB_TOKEN \}\} if your build lasts less than an hour, or create your own secret token with repository access if your build requires longer than an hour.
           token: ${{ secrets.GITHUB_TOKEN }}
           # Paths to built files to be released. May be absolute or relative to \$\{\{ github.workspace \}\}.
-          files: toolchains.tar
+          files: |
+            toolchains.tar
+            toolchains_version.txt
           # The name of the release to be created. A reasonable looking release name will be created from the current \$\{\{ github.ref \}\} if this input is not supplied.
           release: Toolchains
           # The name of the tag to be used. If not provided, the name of the release will be used.
-          tag: toolchain_v1
+          tag: toolchain_latest
           # A one-line description for both the tag and the release.
           message: Toolchains
           # A fuller description of the release.
-          body: Toolchain Binary V1
+          body: Toolchain Binary Latest, please check the toolchains_version.txt
           # Should the release, if created, be marked as a prerelease?  Such releases are generally publicly visible.
           prerelease: false
           # Should the release, if created, be marked as a draft?  Such releases are generally not publicly visible.
