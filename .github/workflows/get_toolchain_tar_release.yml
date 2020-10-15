@@ -30,6 +30,9 @@ jobs:
       - name: Echo MD5 SUM
         run: echo 'The MD5SUM of toolchains.tarr is' ${{ steps.md5sum_toolchains.outputs.MD5SUM }}
 
+      - name: Echo MD5 SUM to file
+        run: md5sum toolchains.tar > toolchains.tar.md5
+
       - name: Delete tag and release
         # You may pin to the exact commit or the version.
         # uses: dev-drprasad/delete-tag-and-release@6bf166de162e06a25bd2055f3be7b2f33f8b5cc8
@@ -50,7 +53,7 @@ jobs:
         with:
           tag_name: toolchain_latest
           release_name: Toolchains
-          body: Toolchain Binary Latest, MD5SUM ${{ steps.md5sum_toolchains.outputs.MD5SUM }}
+          body: Toolchain Binary Latest
           draft: false
           prerelease: false
 
@@ -64,3 +67,14 @@ jobs:
           asset_path: ./toolchains.tar
           asset_name: toolchains.tar
           asset_content_type: application/x-tar
+
+      - name: Upload Release Asset MD5
+        id: upload-release-asset-md5 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./toolchains.tar.md5
+          asset_name: toolchains.tar.md5
+          asset_content_type: plain/text
