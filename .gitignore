@@ -2,5 +2,7 @@
 *.un~
 *.swp
 
-docker_toolchains/toolchains
 *.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz

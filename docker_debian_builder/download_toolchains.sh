@@ -4,7 +4,7 @@ set -e
 
 TL_DIR="/"
 
-DL_VER="toolchain_v1"
+DL_VER="toolchain_latest"
 DL_URL="https://github.com/freeioe/freeioe_dockers/releases/download/"${DL_VER}
 DL_FILE="toolchains.tar"
 
