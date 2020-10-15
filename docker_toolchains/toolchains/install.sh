@@ -25,7 +25,7 @@ tar -xJf staging_dir.tar.xz
 rm -f staging_dir.tar.xz
 cd staging_dir
 cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/include/iconv.h ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-7.4.0_musl_eabi/include/
-cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/include/*.a ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-7.4.0_musl_eabi/lib/
+cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/lib/*.a ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-7.4.0_musl_eabi/lib/
 
 # SUNXI A7 (X1) Snapshot
 echo "Sunxi A7 Toolchain(snapshot)"
@@ -36,7 +36,7 @@ tar -xJf staging_dir.tar.xz
 rm -f staging_dir.tar.xz
 cd staging_dir
 cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/include/iconv.h ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/include/
-cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/include/*.a ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/lib/
+cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/lib/*.a ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/lib/
 
 # RAMIPS MT7688 (C1) Snapshot
 echo "Ramips MT7688 Toolchain(snapshot)"
@@ -47,7 +47,7 @@ tar -xJf staging_dir.tar.xz
 rm -f staging_dir.tar.xz
 cd staging_dir
 cp -f target-mipsel_24kc_musl/usr/lib/libiconv-full-full/include/iconv.h ../openwrt-toolchain-ramips-mt76x8_gcc-8.4.0_musl.Linux-x86_64/toolchain-mipsel_24kc_gcc-8.4.0_musl/include/
-cp -f target-mipsel_24kc_musl/usr/lib/libiconv-full-full/include/iconv.h ../openwrt-toolchain-ramips-mt76x8_gcc-8.4.0_musl.Linux-x86_64/toolchain-mipsel_24kc_gcc-8.4.0_musl/lib/
+cp -f target-mipsel_24kc_musl/usr/lib/libiconv-full-full/lib/*.a ../openwrt-toolchain-ramips-mt76x8_gcc-8.4.0_musl.Linux-x86_64/toolchain-mipsel_24kc_gcc-8.4.0_musl/lib/
 
 
 # X86_64 19.07
