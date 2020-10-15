@@ -20,6 +20,7 @@ RUN apt-get install -y build-essential git autoconf \
 	wget \
 	zip \
 	unzip \
+	file \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/premake/premake-core/releases/download/v5.0.0-alpha15/premake-5.0.0-alpha15-linux.tar.gz -O /premake5.tar.gz
