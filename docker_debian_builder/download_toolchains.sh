@@ -12,6 +12,9 @@ mkdir -p ${TL_DIR}
 cd ${TL_DIR}
 
 wget -nv -O ${DL_FILE} ${DL_URL}/${DL_FILE}
+wget -nv -O ${DL_FILE}.md5 ${DL_URL}/${DL_FILE}.md5
+
+md5sum -c ${DL_FILE}.md5
 
 tar xvf ${DL_FILE}
 rm ${DL_FILE}

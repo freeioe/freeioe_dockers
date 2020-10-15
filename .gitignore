@@ -6,3 +6,5 @@
 *.tar.gz
 *.tar.bz2
 *.tar.xz
+iconv.h
+libiconv.a
