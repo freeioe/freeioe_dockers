@@ -10,7 +10,7 @@ RUN chmod +x /download_toolchains.sh
 RUN chmod +x /uncompress_toolchains.sh
 
 RUN apt-get update
-RUN apt-get install -y build-essential git autoconf \
+RUN apt-get install -y build-essential git autoconf cmake \
     libreadline-dev \
 	libssl-dev \
 	libcurl4-openssl-dev \

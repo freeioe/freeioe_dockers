@@ -35,8 +35,8 @@ rm -f openwrt-toolchain-sunxi-cortexa7_gcc-8.4.0_musl_eabi.Linux-x86_64.tar.bz2
 tar -xJf staging_dir.tar.xz
 rm -f staging_dir.tar.xz
 cd staging_dir
-cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/include/iconv.h ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/include/
-cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/lib/*.a ../openwrt-toolchain-sunxi-cortexa7_gcc-7.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/lib/
+cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/include/iconv.h ../openwrt-toolchain-sunxi-cortexa7_gcc-8.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/include/
+cp -f target-arm_cortex-a7+neon-vfpv4_musl_eabi/usr/lib/libiconv-full-full/lib/*.a ../openwrt-toolchain-sunxi-cortexa7_gcc-8.4.0_musl_eabi.Linux-x86_64/toolchain-arm_cortex-a7+neon-vfpv4_gcc-8.4.0_musl_eabi/lib/
 
 # RAMIPS MT7688 (C1) Snapshot
 echo "Ramips MT7688 Toolchain(snapshot)"
