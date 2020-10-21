@@ -52,8 +52,8 @@ COPY --from=build /process-monitor/process-monitor /usr/bin/
 COPY --from=build /skynet/skynet_release.tar.gz /usr/ioe_ipt/skynet.tar.gz
 COPY --from=build /skynet/skynet_release.tar.gz.md5 /usr/ioe_ipt/skynet.tar.gz.md5
 
-RUN wget http://openwrt.kooiot.com/download/freeioe/1356.tar.gz -O /usr/ioe_ipt/freeioe.tar.gz
-RUN wget http://openwrt.kooiot.com/download/freeioe/1356.tar.gz.md5 -O /usr/ioe_ipt/freeioe.tar.gz.md5
+RUN wget http://openwrt.kooiot.com/download/freeioe/1366.tar.gz -O /usr/ioe_ipt/freeioe.tar.gz
+RUN wget http://openwrt.kooiot.com/download/freeioe/1366.tar.gz.md5 -O /usr/ioe_ipt/freeioe.tar.gz.md5
 
 # RUN mkdir -p /usr/ioe/skynet
 # RUN cd /usr/ioe/skynet && tar xzvf /usr/ioe/ipt/skynet.tar.gz
