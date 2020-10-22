@@ -32,7 +32,7 @@ uncompress_files() {
 	# UnCompress Skynet
 	if [ -f /usr/ioe_ipt/skynet.tar.gz ]; then
 		mkdir -p /usr/ioe/skynet_new
-		tar -C /usr/ioe/skynet -xzf /usr/ioe_ipt/skynet.tar.gz
+		tar -C /usr/ioe/skynet_new -xzf /usr/ioe_ipt/skynet.tar.gz
 
 		if [ -f /usr/ioe/skynet/cfg.json ]; then
 			cp /usr/ioe/skynet/cfg.json /usr/ioe/skynet_new/
@@ -41,7 +41,7 @@ uncompress_files() {
 
 		if [ -f /usr/ioe/skynet/version ]; then
 			IPT_VERSION=`head -n1 /usr/ioe/skynet_new/version`
-			INS_VERSION=`head -n1 /usr/ioe/skynet_new/version`
+			INS_VERSION=`head -n1 /usr/ioe/skynet/version`
 
 			if [ ${IPT_VERSION} -gt ${INS_VERSION} ]; then
 				rm -rf /usr/ioe/skynet
