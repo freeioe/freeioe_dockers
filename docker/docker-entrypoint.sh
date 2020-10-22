@@ -13,13 +13,13 @@ else
 	fi
 
 	if [ -f /usr/ioe_ipt/freeioe.tar.gz ]; then
-		mv /usr/ioe_ipt/freeioe.tar.gz* /usr/ioe/ipt/
+		mv -f /usr/ioe_ipt/freeioe.tar.gz* /usr/ioe/ipt/
 		rm -rf /usr/ioe/freeioe
 		mkdir -p /usr/ioe/freeioe
 		tar -C /usr/ioe/freeioe -xzf /usr/ioe/ipt/freeioe.tar.gz
 	fi
 	if [ -f /usr/ioe_ipt/skynet.tar.gz ]; then
-		mv /usr/ioe_ipt/skynet.tar.gz* /usr/ioe/ipt/
+		mv -f /usr/ioe_ipt/skynet.tar.gz* /usr/ioe/ipt/
 		rm -rf /usr/ioe/skynet
 		mkdir -p /usr/ioe/skynet
 		tar -C /usr/ioe/skynet -xzf /usr/ioe/ipt/skynet.tar.gz
